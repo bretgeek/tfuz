@@ -39,14 +39,14 @@ Visit **https://tfuz.com** for updates and info.
 ```html
 // somewhere in your html
 
-<div id='app'>I am an App </div>
+<div id='app'> I am an App </div>
 ```
 
 * In a script tag after tfuz.min.js:
 
 ```js
+// create function to do stuff
 function init(){
-
 // there are many options to "grab" but this minimal use returns the first element of #app by default
 
 let app = tfuz.grab('#app');
@@ -63,7 +63,7 @@ tfuz.ready(init);
 
 * In your same script file from above add:
 
-``js
+```js
 function myplug(){
 this.css('color: red;');
 return this;

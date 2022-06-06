@@ -50,7 +50,7 @@ function init(){
 // there are many options to "grab" but this minimal use returns the first element of #app by default
 
 let app = tfuz.grab('#app');
-app.css('color: red;');
+app.css('color: red;'); // changes apps color
 }
 
 

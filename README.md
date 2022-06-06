@@ -82,6 +82,44 @@ app.myplug();
 
 ```
 
+### In Work - currently working on filling these out 
+
+ *   append -  el.append('text or html') - append to bottom of el.
+ *   appendTo - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.
+ *   prependTo - Same as appendTo but prepends to silly.
+ *   grab - short hand for each  that will run function and return found collection.
+ *   each - 
+ *   select - 
+ *   ready - 
+ *   css - 
+ *   html - 
+ *   _text -  prefix with underscore because anchor tags have a text property that you can't overwrite
+ *   fn - alias to plg
+ *   delay - 
+ *   on - adds an event listener
+ *   off - 
+ *   trigger -  trigger an event created with on.
+ *   observe - ,
+ *   unobserve - 
+ *   getobservers -  Get list of observers,
+ *   scroll - 
+ *   attr - 
+ *   removeAttr - 
+ *   addClass - 
+ *   removeClass - 
+ *   toggle -  toggle on or off a class
+ *   rpx - remove px, em from numbers
+ *   cs - return computed values 
+ *   isString - return boolean if is a string. 
+ *   isFunction -  return boolean if is a function.
+ *   isObject -  return boolean is an Object.
+ *   isArray - return boolean  if is an array.
+ *   isElement -  return bollean  if is an Element.
+ *   isNumber -return boolean if is a number.
+ *   isEmpty -  return boolean if empty object.
+ *   createNode -  create Node and optionall append or prepend to caller.
+  };
+
 
 
 #### More documentation/usage/tutorials coming soon...

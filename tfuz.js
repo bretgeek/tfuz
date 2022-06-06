@@ -50,7 +50,15 @@ function Tfuz() {
     rpx: rpx,
     cs: cs,
     isString: isString,
+    isFunction: isFunction, 
+    isObject: isObject,
+    isArray: isArray,
+    isElement: isElement,
+    isNumber: isNumber,
+    isEmpty: isEmpty,
+    
     createNode: createNode,
+    
   };
 
   let tfuzloaded = false;

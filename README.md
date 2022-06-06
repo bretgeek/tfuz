@@ -72,9 +72,9 @@ this.css('color: red;');
 return this;
 }
 
-//  add the flugin to app
+// Now tell the app reference that you want to use the plugin:
 
-app.fn({name: 'myplug', fn: myplug});
+app.use({name: 'myplug', fn: myplug});
 
 // Use the new plugin:
 
@@ -95,6 +95,7 @@ app.myplug();
  *   html - 
  *   _text -  prefix with underscore because anchor tags have a text property that you can't overwrite
  *   fn - alias to plg
+ *   use - alias to plg
  *   delay - 
  *   on - adds an event listener
  *   off - 

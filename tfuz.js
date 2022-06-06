@@ -27,6 +27,7 @@ function Tfuz() {
     html: html,
     _text: text, // prefix with underscore because anchor tags have a text property that you can't overwrite
     fn: plg,
+    use: plg,
     delay: delay,
     q: [],
     runq: runq,
@@ -1024,8 +1025,6 @@ function Tfuz() {
     concat = false,
   } = {}) {
     e[name] = fn.bind(e);
-
-    let component = e;
     return this;
   } // end plg
 

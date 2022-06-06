@@ -1,5 +1,7 @@
 
-![TFUZ JavaScript Library](imgs/logo.png?raw=true "TFUZ")(https://tfuz.com)
+
+[<img alt="TFUZ"  src="imgs/logo.png" />](https://tfuz.com/)
+
 
 See https://tfuz.com for ongoing documentation and info.
 

@@ -5,9 +5,9 @@ See https://tfuz.com for ongoing documentation and info.
 
 
 # TFUZ - Tiny Friggin' Utility Zapper
-### (for getting work done fast!)
+### What is it? 
 
-* A tiny ~7kb extendable JavaScript utility library with a JQuery like syntax.
+* A tiny ~7kb extendable JavaScript utility library with a JQuery like syntax for getting work done fast!.
 
 If you are looking for small footprint utility library with a syntax similar to JQuery, TFUZ may be just what you need.
 

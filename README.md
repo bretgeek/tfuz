@@ -86,4 +86,4 @@ app.myplug();
 Until then, feel free to ask questions, read the code or visit https://tfuz.com for lots more info.
 
 
-
+[1]: https://tfuz.com

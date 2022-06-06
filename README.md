@@ -1,5 +1,6 @@
 
-![TFUZ JavaScript Library](imgs/logo.png?raw=true "TFUZ")
+![TFUZ JavaScript Library](imgs/logo.png?raw=true "TFUZ")(https://tfuz.com)
+
 See https://tfuz.com for ongoing documentation and info.
 
 
@@ -86,4 +87,3 @@ app.myplug();
 Until then, feel free to ask questions, read the code or visit https://tfuz.com for lots more info.
 
 
-[1]: https://tfuz.com

@@ -46,7 +46,10 @@ Visit **https://tfuz.com** for updates and info.
 
 ```js
 function init(){
-let app = tfuz.grab('#app'); // there are many options to grab but this minimal use returns the first element of #app by default
+
+// there are many options to "grab" but this minimal use returns the first element of #app by default
+
+let app = tfuz.grab('#app');
 app.css('color: red;');
 }
 

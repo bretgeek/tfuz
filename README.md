@@ -72,11 +72,14 @@ this.css('color: red;');
 return this;
 }
 
-// Now tell the app reference that you want to use the plugin:
 
-app.use({name: 'myplug', fn: myplug});
+//  Now tell TFUZ to use the plugin:                  
+// *** Note you must add plugins at the top of your script file before initalizing anything else. 
 
-// Use the new plugin:
+tfuz.use({name: 'myplug', fn: myplug}); // add to top of your init function.
+
+
+// Use the new plugin where ever you want later:
 
 app.myplug();
 

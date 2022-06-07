@@ -1024,7 +1024,7 @@ function Tfuz() {
     vdata = {},
     concat = false,
   } = {}) {
-    e[name] = fn.bind(e);
+    lobj[name] = fn;
     return this;
   } // end plg
 

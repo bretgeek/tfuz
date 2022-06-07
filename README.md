@@ -85,7 +85,7 @@ app.myplug();
 
 ```
 
-### Methods - * In work currently working on filling these out! 
+### Methods - * In work currently working on filling these out...for help read the function signatures in the code or contact me! 
 
  *   append -  el.append('text or html') - append to bottom of el.
  *   appendTo - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.

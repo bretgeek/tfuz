@@ -57,7 +57,6 @@ function Tfuz() {
     isElement: isElement,
     isNumber: isNumber,
     isEmpty: isEmpty,
-    
     createNode: createNode,
     
   };
@@ -167,10 +166,7 @@ function Tfuz() {
    * @description  create a new node and optionally append or prepend to caller
    * @return document
    */
-  function createNode(
-    str = null,
-    { e = this, add = false, prepend = false } = {}
-  ) {
+  function createNode( str = null, { e = this, add = false, prepend = false } = {} ) {
     let el = false;
     if (str) {
       let s = str;
@@ -301,31 +297,6 @@ function Tfuz() {
 
     return s;
   }
-
-  function getCurrentRotation(e) {
-    const st = window.getComputedStyle(e, null);
-    const tm =
-      st.getPropertyValue("-webkit-transform") ||
-      st.getPropertyValue("-moz-transform") ||
-      st.getPropertyValue("-ms-transform") ||
-      st.getPropertyValue("-o-transform") ||
-      st.getPropertyValue("transform") ||
-      "none";
-    if (tm != "none") {
-      const values = tm.split("(")[1].split(")")[0].split(",");
-      /*
-      a = values[0];
-      b = values[1];
-      angle = Math.round(Math.atan2(b,a) * (180/Math.PI));
-      */
-      const angle = Math.round(
-        Math.atan2(values[1], values[0]) * (180 / Math.PI)
-      );
-      return angle < 0 ? angle + 360 : angle; // add 360 degrees here when angle < 0 is equivalent to adding (2 * Math.PI) radians before
-    }
-    return 0;
-  }
-
   /**
    * cs
    * CS

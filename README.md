@@ -91,7 +91,7 @@ app.myplug(); // use plguin after reference to app was "grabbed";
 
 ```
 
-### Methods - * Currently working on filling these out...for help read the function signatures in the code or contact me! 
+### Methods - * Currently working on updates to this section...for help read the function signatures in the code or contact me! 
 
  *   append -  el.append('text or html') - append to bottom of el.
  *   appendTo - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.
@@ -150,7 +150,7 @@ app.myplug(); // use plguin after reference to app was "grabbed";
    e.html(e.templateHTML + ' '+e.countme)
   }
 
-  app.delay({time: 1000, fn: delayCount, iterate: 6 }); // chaine more delays here if you want.
+  app.delay({time: 1000, fn: delayCount, iterate: 6 }); // chain more delays here if you want.
 
 ```
 

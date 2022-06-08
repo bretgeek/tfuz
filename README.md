@@ -48,7 +48,7 @@ Not every site uses React (and friends) and not every site needs all the feature
 <div id='app'> I am an App </div>
 ```
 
-* In a script tag after tfuz.min.js:
+* In a script tag after tfuz.min.js add:
 
 ```js
 // create a wrapper function to hold all the stuff you want to do:

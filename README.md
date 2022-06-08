@@ -51,21 +51,24 @@ Not every site uses React (and friends) and not every site needs all the feature
 * In a script tag after tfuz.min.js:
 
 ```js
-// create function to do stuff
+// create a wrapper function to hold all the stuff you want to do:
 function init(){
-// there are many options to "grab" but this minimal use returns a reference to the first element (so you don't keep querying the DOM) of #app by default
+
+// Select an element and return a reference to it using "grab"
+// there are many options to "grab" but this minimal use returns a reference
+// to the first element (so you don't keep querying the DOM) of #app by default
 
 let app = tfuz.grab('#app');
 app.css('color: red;'); // changes app's color with CSS
 }
 
 
-// Run your function when the document is ready...
+// Run your wrapper function when the document is ready...
 tfuz.ready(init);
 
 ```
 
-#### Add your own functionality and make plugins
+#### Add your own functionality and make plugins!
 
 * In your same script file from above add:
 
@@ -77,14 +80,14 @@ return this;
 
 
 //  Now tell TFUZ to use the plugin:                  
-// *** Note you must add plugins at the top of your script file before initalizing anything else. 
+// *** Note you must tell TFUZ to use plugins at the top of your script file before initalizing anything else. 
 
-tfuz.use({name: 'myplug', fn: myplug}); // add to top of your init function.
+tfuz.use({name: 'myplug', fn: myplug}); // add to top of your init/wrapper function.
 
 
-// Use the new plugin where ever you want later:
+// Use the new plugin wherever you want later:
 
-app.myplug();
+app.myplug(); // use plguin after reference to app was "grabbed";
 
 ```
 

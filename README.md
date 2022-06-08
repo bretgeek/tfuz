@@ -96,17 +96,16 @@ app.myplug(); // use plguin after reference to app was "grabbed";
  *   append -  el.append('text or html') - append to bottom of el.
  *   appendTo - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.
  *   prependTo - Same as appendTo but prepends to silly.
- *   grab - tfuz.grab or el.grab('selector', {all: false, fn: func}) - short hand for each that will run function and return found collection (first found by default).
+ *   grab - tfuz.grab (query document) or el.grab('selector', {all: false, fn: func}) (query starting from element)  - short hand for each that will run function and return found collection (first found by default).
  *   each - el.each({sel, 'selector1, selector2', all: true, fn: func}) - run function on collection of selectors.
  *   select - el.select({sel, 'selector1, selector2', first: false, fn: func}) - run function on collection of selectors and return collection.
  *   ready - tfuz.ready(func) - run function when document is ready 
  *   css -  el.css('color: blue;') OR   el.css('color: blue;', { add = false } ) to overwrite CSS, true by default to add to current CSS)  
  *   html - el.html() to return html, el.html('some new html here') to set html.
- *   _text - el._text() to return text, el._text('some new text here') to set text -  *prefixed with underscore because anchor tags have a text property that you can't overwrite.
+ *   _text - el._text() to return text, el._text('some new text here') to set text - *prefixed with underscore because anchor tags have a text property that you can't overwrite.
      plg - add a new plugin.
  *   fn - alias to plg.
  *   use - alias to plg.
- *   delay - iterable delay queue description coming soon.
  *   on - el.on('click', func) - adds an event listener.
  *   off - el.off('click', func) -  removes event listener created by on.
  *   trigger -  trigger an event created with on.
@@ -119,8 +118,8 @@ app.myplug(); // use plguin after reference to app was "grabbed";
  *   addClass - el.addClass('classname list');
  *   removeClass - el.removeClass('classlist');
  *   toggle -  toggle on or off a class
- *   rpx - remove px, em from numbers
- *   cs - return computed values 
+ *   rpx - remove px, em from numbers and return number.
+ *   cs - return computed values. 
  *   isString - return boolean if is a string. 
  *   isFunction -  return boolean if is a function.
  *   isObject -  return boolean is an Object.
@@ -129,11 +128,35 @@ app.myplug(); // use plguin after reference to app was "grabbed";
  *   isNumber -return boolean if is a number.
  *   isEmpty -  return boolean if empty object.
  *   createNode -  create Node and optionall append or prepend to caller.
-  };
+ *   delay - iterable delay queue - el.delay({time: 1000, fn: yourFunc, iterate: 6 }); -  runs yourFunc every second for 6 iterations - chained delays are queued and ran in order until queue is empty..
 
 
 
-#### More documentation/usage/tutorials coming soon...
+
+
+### Delay Example
+
+```js
+
+  function delayCount(e){
+    if(!e.templateHTML){
+     if(!e.countme){
+       e.countme = 0;
+     }
+      e.templateHTML = e.html(); // save original html fur future iterations
+    }  
+    e.countme++;
+   console.log('Count is '+e.countme);
+   e.html(e.templateHTML + ' '+e.countme)
+  }
+
+  app.delay({time: 1000, fn: delayCount, iterate: 6 }); // chaine more delays here if you want.
+
+```
+
+
+
+#### More documentation/usage/examples soon...
 
 Until then, feel free to ask questions, read the code or visit https://tfuz.com for lots more info.
 

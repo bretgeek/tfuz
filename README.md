@@ -24,6 +24,9 @@ Visit **https://tfuz.com** for updates and info.
 * Ability set up custom observers on any element.
 * And more ...
 
+### Why? 
+Not every site uses React (and friends) and not every site needs all the features that require loading the full JQuery library. TFUZ is the pagespeed conscious web developer's best friend. It's super small and easy to extend. Sure you could write everything TFUZ has to offer in Vanilla JavaScript but TFUZ is so small and the syntax is familar and easy to remember that it can potentially save you time / development costs. TFUZ is your tiny tool belt of most used DOM manipulation tools with some really cool extra bits. If TFUZ doesn't have what you need you can easily add it!
+
 ## Basic Usage
 
 * Basic usage for manually adding and using TFUZ to a web page. 

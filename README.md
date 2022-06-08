@@ -158,6 +158,6 @@ app.myplug(); // use plguin after reference to app was "grabbed";
 
 #### More documentation/usage/examples soon...
 
-Until then, feel free to ask questions, read the code or visit https://tfuz.com for lots more info.
+Until then, feel free to ask questions, read the code or visit https://tfuz.com contact info.
 
 

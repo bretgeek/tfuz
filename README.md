@@ -3,18 +3,16 @@
 [<img alt="TFUZ"  src="imgs/logo.png" />](https://tfuz.com/)
 
 
-See https://tfuz.com for ongoing documentation and info.
 
 
+## What is it?
 
-# TFUZ - Tiny Friggin' Utility Zapper
-### What is it? 
+### A tiny ~7kb extendable JavaScript utility library with a JQuery like syntax for getting work done fast!
 
-#### A tiny ~7kb extendable JavaScript utility library with a JQuery like syntax for getting work done fast!
+If you are looking for small footprint utility library with a syntax similar to JQuery, **TFUZ** may be just what you need.
 
-If you are looking for small footprint utility library with a syntax similar to JQuery, TFUZ may be just what you need.
-
-Visit **https://tfuz.com** for updates and info.
+Get **TFUZ** at https://github.com/bretgeek/tfuz
+Visit https://tfuz.com for ongoing documentation and examples.
 
 ## Features
 * Tiny! - currently under ~7KB minified (smaller if gzipped).
@@ -24,14 +22,22 @@ Visit **https://tfuz.com** for updates and info.
 * Ability set up custom observers on any element.
 * And more ...
 
-### Why? 
-Not every site uses React (and friends) and not every site needs all the features that require loading the full JQuery library. TFUZ is the pagespeed conscious web developer's best friend. It's super small and easy to extend. Sure you could write everything TFUZ has to offer in Vanilla JavaScript but TFUZ is so small and the syntax is familar and easy to remember that it can potentially save you time / development costs. TFUZ is your tiny tool belt of most used DOM manipulation tools with some really cool extra bits. If TFUZ doesn't have what you need you can easily add it!
+### Why?
+Not every site uses React (and friends) and not every site needs all the features that require loading the full JQuery library.
+
+**TFUZ** is the pagespeed conscious web developer's best friend. It's super small and easy to extend.
+
+ Sure you could write everything **TFUZ** has to offer in Vanilla JavaScript but **TFUZ** is so small and the syntax is familiar and easy to remember that it can potentially save you time / development costs.
+
+**TFUZ** is your tiny tool belt of most used DOM manipulation tools with some really cool extra bits.
+
+ If **TFUZ** doesn't have what you need you can easily add it!
 
 ## Basic Usage
 
-* Basic usage for manually adding and using TFUZ to a web page. 
+* Basic usage for manually adding and using **TFUZ** to a web page.
 
-#### Add TFUZ to your page before your closing body tag :
+### Add TFUZ to your page before your closing body tag :
 
 ```html
 <script src='https://yoururl.com/tfuz.min.js'></script>
@@ -39,7 +45,7 @@ Not every site uses React (and friends) and not every site needs all the feature
 ```
 
 
-#### Use TFUZ like you would JQuery
+### Use TFUZ like you would JQuery
 
 * In an html file:
 ```html
@@ -68,7 +74,7 @@ tfuz.ready(init);
 
 ```
 
-#### Add your own functionality and make plugins!
+### Add your own functionality and make plugins!
 
 * In your same script file from above add:
 
@@ -79,8 +85,8 @@ return this;
 }
 
 
-//  Now tell TFUZ to use the plugin:                  
-// *** Note you must tell TFUZ to use plugins at the top of your script file before initalizing anything else. 
+//  Now tell TFUZ to use the plugin:
+// *** Note you must tell TFUZ to use plugins at the top of your script file before initalizing anything else.
 
 tfuz.use({name: 'myplug', fn: myplug}); // add to top of your init/wrapper function.
 
@@ -91,44 +97,44 @@ app.myplug(); // use plguin after reference to app was "grabbed";
 
 ```
 
-### Methods - * Currently working on updates to this section...for help read the function signatures in the code or contact me! 
+### Some TFUZ Methods - *For help read the function signatures in the code or contact me!
 
- *   append -  el.append('text or html') - append to bottom of el.
- *   appendTo - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.
- *   prependTo - Same as appendTo but prepends to silly.
- *   grab - tfuz.grab (query document) or el.grab('selector', {all: false, fn: func}) (query starting from element)  - short hand for each that will run function and return found collection (first found by default).
- *   each - el.each({sel, 'selector1, selector2', all: true, fn: func}) - run function on collection of selectors.
- *   select - el.select({sel, 'selector1, selector2', first: false, fn: func}) - run function on collection of selectors and return collection.
- *   ready - tfuz.ready(func) - run function when document is ready 
- *   css -  el.css('color: blue;') OR   el.css('color: blue;', { add = false } ) to overwrite CSS, true by default to add to current CSS)  
- *   html - el.html() to return html, el.html('some new html here') to set html.
- *   _text - el._text() to return text, el._text('some new text here') to set text - *prefixed with underscore because anchor tags have a text property that you can't overwrite.
-     plg - add a new plugin.
- *   fn - alias to plg.
- *   use - alias to plg.
- *   on - el.on('click', func) - adds an event listener.
- *   off - el.off('click', func) -  removes event listener created by on.
- *   trigger -  trigger an event created with on.
- *   observe - listen for changes on elements - description coming soon.
- *   unobserve - stop obeserving observers of elements created by observe.
- *   getobservers -  Get list of observers
- *   scroll - tfuz.scroll(func) - run function on scroll.
- *   attr -  get or set attributes of el. - description coming soon
- *   removeAttr - el.removeAttr('attr') -  remove attributes of el
- *   addClass - el.addClass('classname list');
- *   removeClass - el.removeClass('classlist');
- *   toggle -  toggle on or off a class
- *   rpx - remove px, em from numbers and return number.
- *   cs - return computed values. 
- *   isString - return boolean if is a string. 
- *   isFunction -  return boolean if is a function.
- *   isObject -  return boolean is an Object.
- *   isArray - return boolean  if is an array.
- *   isElement -  return bollean  if is an Element.
- *   isNumber -return boolean if is a number.
- *   isEmpty -  return boolean if empty object.
- *   createNode -  create Node and optionall append or prepend to caller.
- *   delay - iterable delay queue - el.delay({time: 1000, fn: yourFunc, iterate: 6 }); -  runs yourFunc every second for 6 iterations - chained delays are queued and ran in order until queue is empty..
+ *   **append** -  el.append('text or html') - append to bottom of el.
+ *   **appendTo** - el.appendTo('.otherEl' or el.appendTo(Elvar) - append to first of selector or to reference.
+ *   **prependTo** - Same as appendTo but prepends to silly.
+ *   **grab** - tfuz.grab (query document) or el.grab('selector', {all: false, fn: func}) (query starting from element)  - short hand for each that will run function and return found collection (first found by default).
+ *   **each**- el.each({sel, 'selector1, selector2', all: true, fn: func}) - run function on collection of selectors.
+ *   **select** - el.select({sel, 'selector1, selector2', first: false, fn: func}) - run function on collection of selectors and return collection.
+ *  **ready** - tfuz.ready(func) - run function when document is ready
+ *   **css** -  el.css('color: blue;') OR   el.css('color: blue;', { add = false } ) to overwrite CSS, true by default to add to current CSS)
+ *   **html** - el.html() to return html, el.html('some new html here') to set html.
+ *   **_text**- el._text() to return text, el._text('some new text here') to set text - *prefixed with underscore because anchor tags have a text property that you can't overwrite.
+ *   **plg** - add a new plugin.
+ *   **fn** - alias to plg.
+ *   **use** - alias to plg.
+ *   **on** - el.on('click', func) - adds an event listener.
+ *   **off** - el.off('click', func) -  removes event listener created by on.
+ *   **trigger** -  trigger an event created with on.
+ *   **observe**- listen for changes on elements - read code!
+ *   **unobserve** - stop observing observers of elements created by observe.
+ *   **getobservers** -  Get list of observers
+ *   **scroll** - tfuz.scroll(func) - run function on scroll.
+ *   **attr** -  get or set attributes of el.
+ *   **removeAttr** - el.removeAttr('attr') -  remove attributes of el
+ *   **addClass** - el.addClass('classname list');
+ *   **removeClass** - el.removeClass('classlist');
+ *   **toggle** -  toggle on or off a class
+ *   **rpx** - remove px, em from numbers and return number.
+ *   **cs** - return computed values.
+ *   **isString** - return boolean if is a string.
+ *   **isFunction** -  return boolean if is a function.
+ *   **isObject** -  return boolean is an Object.
+ *   **isArray** - return boolean  if is an array.
+ *   **isElement** -  return bollean  if is an Element.
+ *   **isNumber** -return boolean if is a number.
+ *   **isEmpty** -  return boolean if empty object.
+ *   **createNode** -  create Node and optionall append or prepend to caller.
+ *   **delay** - iterate-able delay queue - el.delay({time: 1000, fn: yourFunc, iterate: 6 }); -  runs yourFunc every second for 6 iterations - chained delays are queued and ran in order until queue is empty..
 
 
 
@@ -138,26 +144,27 @@ app.myplug(); // use plguin after reference to app was "grabbed";
 
 ```js
 
+  // Create a normal function - as an example this function will increase a counter
   function delayCount(e){
     if(!e.templateHTML){
      if(!e.countme){
        e.countme = 0;
      }
-      e.templateHTML = e.html(); // save original html fur future iterations
-    }  
+      e.templateHTML = e.html(); // save original html for future iterations
+    }
     e.countme++;
    console.log('Count is '+e.countme);
    e.html(e.templateHTML + ' '+e.countme)
   }
 
+// call delay from app and watch the magic happen as the count up to 6 is appended to the existing html.
   app.delay({time: 1000, fn: delayCount, iterate: 6 }); // chain more delays here if you want.
 
 ```
 
 
 
-#### More documentation/usage/examples soon...
+#### Like TFUZ and want to help?
 
-Until then, feel free to ask questions, read the code or visit https://tfuz.com contact info.
-
+Get TFUZ fork and make imporvements on https://github.com/bretgeek/tfuz
 

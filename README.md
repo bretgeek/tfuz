@@ -2,7 +2,7 @@
 
 [<img alt="TFUZ"  src="imgs/logo.png" />](https://tfuz.com/)
 
-
+# Tiny Friggin' Utility Zapper
 
 
 ## What is it?

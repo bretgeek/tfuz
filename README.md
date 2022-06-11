@@ -172,7 +172,7 @@ We will build **FadeOut** and **FadeIn**.
 
 
 ```js
-// First create the function will call with an iterate-able delay
+// First create the functions  we will call with an iterate-able delay.
 
 // fadeOut
 

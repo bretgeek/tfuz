@@ -164,6 +164,65 @@ app.myplug(); // use plguin after reference to app was "grabbed";
 
 
 
+
+### Now that you know about delay, you can build your own effects!
+**TFUZ** doesn't come with effects, that helps keep the code small. But you can build your own!
+
+We will build **FadeOut** and **FadeIn**.
+
+
+```js
+// fadeOut
+
+function fadeOut(e,options){
+let op =  e.cs('opacity');
+let itr = '0.'+options.iterationsLeft;
+itr = Number(itr)
+e.css(`opacity: ${itr};`);
+}
+
+// FadeIn
+
+function fadeIn(e){
+let op =  e.cs('opacity');
+if(op < 1){
+op = Number( op ) + 0.1
+}
+if(op >= 0.9){
+op = 1
+}
+op = op.toFixed(1);
+e.css(`opacity: ${op};`);
+}
+
+
+// Now use delay to run your new fade functions
+
+fader.delay({time: 100, fn: fadeOut, iterate: 10 });
+fader.delay({time: 100, fn: fadeIn, iterate: 10 });
+
+
+// You could wrap the above delay calls in a function... like fadeInOut() then call fadeInOut on click or wherever you want.
+
+function fadeInOut(){
+fader.delay({time: 100, fn: fadeOut, iterate: 10 });
+fader.delay({time: 100, fn: fadeIn, iterate: 10 });
+}
+
+
+// call fadeInOut on click event
+
+fader.on('click', fadeInOut);
+
+
+```
+
+
+
+
+
+
+
 #### Like TFUZ and want to help?
 
 Get TFUZ fork and make imporvements on https://github.com/bretgeek/tfuz

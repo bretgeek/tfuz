@@ -18,7 +18,7 @@ Visit https://tfuz.com for ongoing documentation and examples.
 * Tiny! - currently under ~7KB minified (smaller if gzipped).
 * Can be used as a general purpose JQuery like library.
 * Easy familiar syntax with built-in chainable DOM manipulation methods.
-* Built-in iterable delay queue.
+* Built-in iterable delay queue for building your own effects.
 * Ability set up custom observers on any element.
 * And more ...
 

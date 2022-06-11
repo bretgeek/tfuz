@@ -29,7 +29,6 @@ function Tfuz() {
     fn: plg,
     use: plg,
     delay: delay,
-    q: [],
     runq: runq,
     copyright: copyright,
     isrun: false,
@@ -569,7 +568,7 @@ function Tfuz() {
   /**
    * delay
    * DELAY
-   * @description delay exection of next chained function and run optional funtion
+   * @description delay exection of next chained function and run optional function
    * @return {object}
    */
   function delay(
@@ -588,6 +587,7 @@ function Tfuz() {
   ) {
     // fps overides time and uses fps
     var ee = e;
+    e.q = e.q || []; // for each element to have it's own queue
     if (isNumber(fps)) {
       // time is now fps
       options["fps"] = fps;

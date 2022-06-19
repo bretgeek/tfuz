@@ -57,7 +57,9 @@ function Tfuz() {
     isNumber: isNumber,
     isEmpty: isEmpty,
     createNode: createNode,
-    
+    registeredComponents: registeredComponents = {},    
+    useShortTags: false,
+    render: render,
   };
 
   let tfuzloaded = false;
@@ -123,6 +125,124 @@ function Tfuz() {
     e.style.cssText = str;
     return this;
   }
+
+
+
+
+  /**
+   * render
+   * RENDER
+   * @description render components
+   * @return null
+   */
+
+function render( {el='div', name=false, evt='click', to='body', fn=false, template="Hello", css=false }={}){
+let options = {
+el: el,
+evt: evt,
+to: to,
+fn: fn,
+template: template,
+css: css,
+name: name
+}
+
+let opts;
+if(isFunction(el)){
+opts = el(); 
+for(let i in options){
+if(!opts[i]){
+opts[i] = options[i];
+}
+for(var k in opts ) {  options[k]=opts[k] }// assign all props of opts to options
+}
+}
+
+
+if(options.name){
+// put name as a function of tfuz and execute it whenever it is seem by any other render's template
+console.log('autoparse all templates from now on for '+options.name); // and options name must not be able to be duplicated only first one works.
+let nm = options.name
+
+lobj.registeredComponents[nm] = lobj.registeredComponents[nm] || function(fn=false) { // don't over write
+//let nel = doel(options);
+if(isFunction(fn)){
+lobj.each({sel: '.'+options.name, fn: function(e) { fn(e)  }  } );
+return;
+}
+
+if(isString(fn)){
+lobj.each({sel: '.'+options.name, fn: function(e) { e.html(fn) }  } );
+return;
+}
+
+
+let nel = lobj.createNode(options.el );
+nel.className = nm;
+nel.addClass(nm);//TODO trimify
+nel.html(options.template)
+return nel.outerHTML;
+}
+}
+
+
+for(var k in lobj.registeredComponents ) {
+if(!lobj['$'+k]){
+  lobj['$'+k]=lobj.registeredComponents[k]
+}
+}// assign all props of opts to options
+
+//parse all templates and replace registeredComponents[*]  with approp {{ name }}ed functions
+for (const [key, value] of Object.entries(lobj.registeredComponents)) {
+let re = /{{(.*?)}}/g;
+if(lobj.useShortTags){
+ re = /<(.*?)\/>/g;
+}
+const m = template.matchAll(re);
+const matches = Array.from(m);
+if(matches.length){
+options.template = options.template.replace(re, value());
+}
+}
+
+function doel(options, htm=false){
+let newel;
+if(!isElement(options.el)){
+newel = lobj.createNode(options.el, {add: options.to});
+if(options.name){
+newel.className = options.name;
+newel.addClass(options.name);//TODO trimify
+}
+}else{
+newel = options.el;
+}
+if(isFunction(options.fn)){
+options.fn(newel);
+}
+if(isString(options.css)){
+newel.css(options.css);
+}
+newel.html(options.template);
+
+return newel;
+}
+
+
+return doel(options);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /**
    * scroll

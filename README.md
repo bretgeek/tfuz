@@ -20,8 +20,6 @@ Visit https://tfuz.com for ongoing documentation and examples.
 * Easy familiar syntax with built-in chainable DOM manipulation methods.
 * Built-in iterable delay queue for building your own effects.
 * Ability set up custom observers on any element.
-* Optional component based rendering syntax - make components and render them anywhere.
-
 * And more ...
 
 ### Why?

@@ -45,7 +45,7 @@ Not every site uses React (and friends) and not every site needs all the feature
 ```
 
 
-### Use TFUZ like you would JQuery
+### Use TFUZ similar to how you would use JQuery
 
 * In an html file:
 ```html
